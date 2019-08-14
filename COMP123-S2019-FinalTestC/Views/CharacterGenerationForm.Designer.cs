@@ -72,6 +72,7 @@
             this.SheetLastNameLabel = new System.Windows.Forms.Label();
             this.SheetFirstNameDataLabel = new System.Windows.Forms.Label();
             this.SheetLastNameDataLabel = new System.Windows.Forms.Label();
+            this.SheetSkillsLabel = new System.Windows.Forms.Label();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.IdentityTableLayoutPanel.SuspendLayout();
@@ -454,6 +455,7 @@
             this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetLastNameLabel, 1, 0);
             this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetFirstNameDataLabel, 0, 1);
             this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetLastNameDataLabel, 1, 1);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSkillsLabel, 0, 2);
             this.CharachterSheetTableLayoutPanel.Location = new System.Drawing.Point(10, 7);
             this.CharachterSheetTableLayoutPanel.Name = "CharachterSheetTableLayoutPanel";
             this.CharachterSheetTableLayoutPanel.RowCount = 6;
@@ -676,6 +678,19 @@
             this.SheetLastNameDataLabel.TabIndex = 18;
             this.SheetLastNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // SheetSkillsLabel
+            // 
+            this.SheetSkillsLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.CharachterSheetTableLayoutPanel.SetColumnSpan(this.SheetSkillsLabel, 2);
+            this.SheetSkillsLabel.Location = new System.Drawing.Point(3, 116);
+            this.SheetSkillsLabel.Name = "SheetSkillsLabel";
+            this.SheetSkillsLabel.Size = new System.Drawing.Size(446, 58);
+            this.SheetSkillsLabel.TabIndex = 19;
+            this.SheetSkillsLabel.Text = "Skills";
+            this.SheetSkillsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // CharacterGenerationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
@@ -743,5 +758,6 @@
         private System.Windows.Forms.Label SheetLastNameLabel;
         private System.Windows.Forms.Label SheetFirstNameDataLabel;
         private System.Windows.Forms.Label SheetLastNameDataLabel;
+        private System.Windows.Forms.Label SheetSkillsLabel;
     }
 }

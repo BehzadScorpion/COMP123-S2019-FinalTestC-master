@@ -58,6 +58,11 @@ namespace COMP123_S2019_FinalTestC.Views
             }
         }
 
+        /// <summary>
+        /// This is the event handler for the GenerateNameButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
    
@@ -107,6 +112,11 @@ namespace COMP123_S2019_FinalTestC.Views
    
         }
 
+        /// <summary>
+        /// This is the event handler for the GenerateAbilitiesButton Click event
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
             int maxSkill = 100; // maximum amount of ability points
