@@ -20,15 +20,16 @@ namespace COMP123_S2019_FinalTestC.Views
     {
         TextReader FirstNameReader { get; set; }
         TextReader LastNameReader { get; set; }
-        //Random Rand { get; set; }
-        public CharacterPortfolio Portfolio { get; set; }
-        //public Identity CurrentIdentity { get; set; }
+        TextReader SkillsReader { get; set; }
+        Random Rand { get; set; }
+        CharacterPortfolio Character { get; set; }
+        
 
         public CharacterGenerationForm()
         {
             InitializeComponent();
             //Rand = new Random();
-            Portfolio = new CharacterPortfolio();
+            Character = new CharacterPortfolio();
             //CurrentIdentity = new Identity();
         }
 
@@ -65,7 +66,7 @@ namespace COMP123_S2019_FinalTestC.Views
         /// <param name="e"></param>
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
-            GenerateName();
+            NameGenerator();
 
         }
 
@@ -73,9 +74,8 @@ namespace COMP123_S2019_FinalTestC.Views
         /// <summary>
         /// This is The random name-Generator method
         /// </summary>
-        private void GenerateName()
+        private void NameGenerator()
         {
-            Random Rand;
             Rand = new Random();
             using (FirstNameReader = new StreamReader(File.Open("..\\..\\Data\\firstNames.txt", FileMode.Open)))
             {
@@ -90,9 +90,9 @@ namespace COMP123_S2019_FinalTestC.Views
                 }
 
                 randomFirstNameIndex = Rand.Next(i);//generating the random number for the First-Name Index
-                Portfolio.Identity.FirstName = names[randomFirstNameIndex];//getting the randomized name from the list and setting it as the FirstName property
-                FirstNameDataLabel.Text = Portfolio.Identity.FirstName; //displaying First Name 
-                SheetFirstNameDataLabel.Text = Portfolio.Identity.FirstName; //displaying First Name 
+                Character.Identity.FirstName = names[randomFirstNameIndex];//getting the randomized name from the list and setting it as the FirstName property
+                FirstNameDataLabel.Text = Character.Identity.FirstName; //displaying First Name 
+                SheetFirstNameDataLabel.Text = Character.Identity.FirstName; //displaying First Name 
                 FirstNameReader.Close();
                 FirstNameReader.Dispose();
                 names.Clear();
@@ -111,9 +111,9 @@ namespace COMP123_S2019_FinalTestC.Views
                 }
 
                 randomLastNameIndex = Rand.Next(i); //generating the random number for the Last-Name Index
-                Portfolio.Identity.LastName = names[randomLastNameIndex];//getting the randomized name from the list and setting it as the LastName property
-                LastNameDataLabel.Text = Portfolio.Identity.LastName; //Displaying Last Name
-                SheetLastNameDataLabel.Text = Portfolio.Identity.LastName; //Displaying Last Name in CharacterSheet
+                Character.Identity.LastName = names[randomLastNameIndex];//getting the randomized name from the list and setting it as the LastName property
+                LastNameDataLabel.Text = Character.Identity.LastName; //Displaying Last Name
+                SheetLastNameDataLabel.Text = Character.Identity.LastName; //Displaying Last Name in CharacterSheet
                 LastNameReader.Close();
                 LastNameReader.Dispose();
                 names.Clear();
@@ -137,32 +137,31 @@ namespace COMP123_S2019_FinalTestC.Views
         /// </summary>
         private void GenerateAbilities()
         {
-            Random Rand = new Random();
             int maxSkill = 15; // maximum amount of ability points
 
             //Asigning random integers to the Portfolio properties
-            Portfolio.Strength = Convert.ToString(Rand.Next(1, maxSkill + 1));
-            Portfolio.Dexterity = Convert.ToString(Rand.Next(1, maxSkill + 1));
-            Portfolio.Endurance = Convert.ToString(Rand.Next(1, maxSkill + 1));
-            Portfolio.Intellect = Convert.ToString(Rand.Next(1, maxSkill + 1));
-            Portfolio.Education = Convert.ToString(Rand.Next(1, maxSkill + 1));
-            Portfolio.SocialStanding = Convert.ToString(Rand.Next(1, maxSkill + 1));
+            Character.Strength = Convert.ToString(Rand.Next(1, maxSkill + 1));
+            Character.Dexterity = Convert.ToString(Rand.Next(1, maxSkill + 1));
+            Character.Endurance = Convert.ToString(Rand.Next(1, maxSkill + 1));
+            Character.Intellect = Convert.ToString(Rand.Next(1, maxSkill + 1));
+            Character.Education = Convert.ToString(Rand.Next(1, maxSkill + 1));
+            Character.SocialStanding = Convert.ToString(Rand.Next(1, maxSkill + 1));
 
             //Displaying the value of the Portfolio object properties in the appropriate labels
-            StrengthDataLabel.Text = Portfolio.Strength;
-            DexterityDataLabel.Text = Portfolio.Dexterity;
-            EnduranceDataLabel.Text = Portfolio.Endurance;
-            IntellectDataLabel.Text = Portfolio.Intellect;
-            EducationDataLabel.Text = Portfolio.Education;
-            SocialStandingDataLabel.Text = Portfolio.SocialStanding;
+            StrengthDataLabel.Text = Character.Strength;
+            DexterityDataLabel.Text = Character.Dexterity;
+            EnduranceDataLabel.Text = Character.Endurance;
+            IntellectDataLabel.Text = Character.Intellect;
+            EducationDataLabel.Text = Character.Education;
+            SocialStandingDataLabel.Text = Character.SocialStanding;
 
             //Displaying the same values in the CharacterSheet
-            SheetStrengthDataLabel.Text = Portfolio.Strength;
-            SheetDexterityDataLabel.Text = Portfolio.Dexterity;
-            SheetEnduranceDataLabel.Text = Portfolio.Endurance;
-            SheetIntellectDataLabel.Text = Portfolio.Intellect;
-            SheetEducationDataLabel.Text = Portfolio.Education;
-            SheetSocialStandingDataLabel.Text = Portfolio.SocialStanding;
+            SheetStrengthDataLabel.Text = Character.Strength;
+            SheetDexterityDataLabel.Text = Character.Dexterity;
+            SheetEnduranceDataLabel.Text = Character.Endurance;
+            SheetIntellectDataLabel.Text = Character.Intellect;
+            SheetEducationDataLabel.Text = Character.Education;
+            SheetSocialStandingDataLabel.Text = Character.SocialStanding;
         }
 
         /// <summary>
@@ -172,8 +171,59 @@ namespace COMP123_S2019_FinalTestC.Views
         /// <param name="e"></param>
         private void CharacterGenerationForm_Load(object sender, EventArgs e)
         {
-            GenerateName();
+            NameGenerator();
         }
 
+        /// <summary>
+        /// This is the event handler for the click event of the GenerateSkillsButton
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void GenerateSkillsButton_Click(object sender, EventArgs e)
+        {
+            SkillsGenerator();
+        }
+
+        /// <summary>
+        /// This is the method for generating a random list of skills using the skills.txt file
+        /// </summary>
+        private void SkillsGenerator()
+        {
+            Character.Skills.Clear(); // clearing the list to make room for a new list of skills
+            using (SkillsReader = new StreamReader(File.Open("..//..//Data//skills.txt", FileMode.Open)))
+            {
+                List<string> skills = new List<string>(); //List to store all the skills from skills.txt
+                int i = 0; //iteration for the looping statement   
+                int n = 0;//iteration for the second looping statement 
+                int randomSkillIndex; //index of the generated random number
+
+                while (SkillsReader.ReadLine() != null)
+                {
+                    if (SkillsReader.ReadLine() != "")
+                    {
+                        skills.Add(SkillsReader.ReadLine());
+                        i++;
+                    }
+
+                }
+                //Adding 4 randomly generated skills to the Character Skills list property
+                while (n <= 4)
+                {
+                    randomSkillIndex = Rand.Next(i);
+                    Character.Skills.Add(skills[randomSkillIndex]);
+                    n++;
+                }
+                //Writing the Character Skills on the skills sheet
+                SkillsLabel1.Text = Character.Skills[0];
+                SkillsLabel2.Text = Character.Skills[1];
+                SkillsLabel3.Text = Character.Skills[2];
+                SkillsLabel4.Text = Character.Skills[3];
+
+                SkillsReader.Close();
+                SkillsReader.Dispose();
+                skills.Clear();
+
+            }
+        }
     }
 }

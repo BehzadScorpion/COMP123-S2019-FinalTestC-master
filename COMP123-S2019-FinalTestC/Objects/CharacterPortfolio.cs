@@ -26,12 +26,12 @@ namespace COMP123_S2019_FinalTestC.Objects
         public string SocialStanding { get; set; }
 
         // Skill List
-        List<Skill> Skills;
+        public List<string> Skills;
 
         // constructor
         public CharacterPortfolio()
         {
-            this.Skills = new List<Skill>();
+            this.Skills = new List<string>();
             this.Identity = new Identity();
         }
     }

@@ -12,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace COMP123_S2019_FinalTestC.Objects
 {
-    public class Skill
+    public class @string
     {
         public string Name { get; set; }
         public int Level { get; set; }
