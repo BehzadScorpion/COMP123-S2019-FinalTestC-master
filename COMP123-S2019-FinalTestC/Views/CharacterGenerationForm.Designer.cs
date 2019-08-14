@@ -73,13 +73,19 @@
             this.SheetIntellectLabel = new System.Windows.Forms.Label();
             this.SheetEducationLabel = new System.Windows.Forms.Label();
             this.SheetSocialStandingLabel = new System.Windows.Forms.Label();
-            this.SheetFirstNameLabel = new System.Windows.Forms.Label();
-            this.SheetLastNameLabel = new System.Windows.Forms.Label();
             this.SheetFirstNameDataLabel = new System.Windows.Forms.Label();
             this.SheetLastNameDataLabel = new System.Windows.Forms.Label();
             this.SheetSkillsLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.SheetSkillsLabel1 = new System.Windows.Forms.Label();
+            this.SheetSkillsLabel2 = new System.Windows.Forms.Label();
+            this.SheetSkillsLabel3 = new System.Windows.Forms.Label();
+            this.SheetSkillsLabel4 = new System.Windows.Forms.Label();
+            this.SaveButton = new System.Windows.Forms.Button();
+            this.CharacterSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
+            this.CharacterOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
+            this.OpenButton = new System.Windows.Forms.Button();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.IdentityTableLayoutPanel.SuspendLayout();
@@ -558,11 +564,13 @@
             this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetIntellectLabel, 2, 3);
             this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetEducationLabel, 2, 4);
             this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSocialStandingLabel, 2, 5);
-            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetFirstNameLabel, 0, 0);
-            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetLastNameLabel, 1, 0);
-            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetFirstNameDataLabel, 0, 1);
-            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetLastNameDataLabel, 1, 1);
-            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSkillsLabel, 0, 2);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSkillsLabel3, 0, 4);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSkillsLabel4, 1, 4);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetLastNameDataLabel, 1, 0);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetFirstNameDataLabel, 0, 0);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSkillsLabel, 0, 1);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSkillsLabel1, 0, 2);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSkillsLabel2, 1, 2);
             this.CharachterSheetTableLayoutPanel.Location = new System.Drawing.Point(10, 7);
             this.CharachterSheetTableLayoutPanel.Name = "CharachterSheetTableLayoutPanel";
             this.CharachterSheetTableLayoutPanel.RowCount = 6;
@@ -572,6 +580,7 @@
             this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
             this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
             this.CharachterSheetTableLayoutPanel.Size = new System.Drawing.Size(658, 353);
             this.CharachterSheetTableLayoutPanel.TabIndex = 0;
             // 
@@ -725,30 +734,6 @@
             this.SheetSocialStandingLabel.Text = "Soc.";
             this.SheetSocialStandingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // SheetFirstNameLabel
-            // 
-            this.SheetFirstNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SheetFirstNameLabel.Location = new System.Drawing.Point(3, 0);
-            this.SheetFirstNameLabel.Name = "SheetFirstNameLabel";
-            this.SheetFirstNameLabel.Size = new System.Drawing.Size(220, 58);
-            this.SheetFirstNameLabel.TabIndex = 15;
-            this.SheetFirstNameLabel.Text = "First Name";
-            this.SheetFirstNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SheetLastNameLabel
-            // 
-            this.SheetLastNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.SheetLastNameLabel.Location = new System.Drawing.Point(229, 0);
-            this.SheetLastNameLabel.Name = "SheetLastNameLabel";
-            this.SheetLastNameLabel.Size = new System.Drawing.Size(220, 58);
-            this.SheetLastNameLabel.TabIndex = 16;
-            this.SheetLastNameLabel.Text = "Last Name";
-            this.SheetLastNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // SheetFirstNameDataLabel
             // 
             this.SheetFirstNameDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -756,7 +741,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SheetFirstNameDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.SheetFirstNameDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SheetFirstNameDataLabel.Location = new System.Drawing.Point(3, 58);
+            this.SheetFirstNameDataLabel.Location = new System.Drawing.Point(3, 0);
             this.SheetFirstNameDataLabel.Name = "SheetFirstNameDataLabel";
             this.SheetFirstNameDataLabel.Size = new System.Drawing.Size(220, 58);
             this.SheetFirstNameDataLabel.TabIndex = 17;
@@ -769,7 +754,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.SheetLastNameDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
             this.SheetLastNameDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.SheetLastNameDataLabel.Location = new System.Drawing.Point(229, 58);
+            this.SheetLastNameDataLabel.Location = new System.Drawing.Point(229, 0);
             this.SheetLastNameDataLabel.Name = "SheetLastNameDataLabel";
             this.SheetLastNameDataLabel.Size = new System.Drawing.Size(220, 58);
             this.SheetLastNameDataLabel.TabIndex = 18;
@@ -781,7 +766,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.CharachterSheetTableLayoutPanel.SetColumnSpan(this.SheetSkillsLabel, 2);
-            this.SheetSkillsLabel.Location = new System.Drawing.Point(3, 116);
+            this.SheetSkillsLabel.Location = new System.Drawing.Point(3, 58);
             this.SheetSkillsLabel.Name = "SheetSkillsLabel";
             this.SheetSkillsLabel.Size = new System.Drawing.Size(446, 58);
             this.SheetSkillsLabel.TabIndex = 19;
@@ -808,10 +793,94 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // SheetSkillsLabel1
+            // 
+            this.SheetSkillsLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetSkillsLabel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetSkillsLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetSkillsLabel1.Location = new System.Drawing.Point(3, 116);
+            this.SheetSkillsLabel1.Name = "SheetSkillsLabel1";
+            this.CharachterSheetTableLayoutPanel.SetRowSpan(this.SheetSkillsLabel1, 2);
+            this.SheetSkillsLabel1.Size = new System.Drawing.Size(220, 116);
+            this.SheetSkillsLabel1.TabIndex = 20;
+            this.SheetSkillsLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetSkillsLabel2
+            // 
+            this.SheetSkillsLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetSkillsLabel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetSkillsLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetSkillsLabel2.Location = new System.Drawing.Point(229, 116);
+            this.SheetSkillsLabel2.Name = "SheetSkillsLabel2";
+            this.CharachterSheetTableLayoutPanel.SetRowSpan(this.SheetSkillsLabel2, 2);
+            this.SheetSkillsLabel2.Size = new System.Drawing.Size(220, 116);
+            this.SheetSkillsLabel2.TabIndex = 21;
+            this.SheetSkillsLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetSkillsLabel3
+            // 
+            this.SheetSkillsLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetSkillsLabel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetSkillsLabel3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetSkillsLabel3.Location = new System.Drawing.Point(3, 232);
+            this.SheetSkillsLabel3.Name = "SheetSkillsLabel3";
+            this.CharachterSheetTableLayoutPanel.SetRowSpan(this.SheetSkillsLabel3, 2);
+            this.SheetSkillsLabel3.Size = new System.Drawing.Size(220, 121);
+            this.SheetSkillsLabel3.TabIndex = 22;
+            this.SheetSkillsLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetSkillsLabel4
+            // 
+            this.SheetSkillsLabel4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetSkillsLabel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetSkillsLabel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetSkillsLabel4.Location = new System.Drawing.Point(229, 232);
+            this.SheetSkillsLabel4.Name = "SheetSkillsLabel4";
+            this.CharachterSheetTableLayoutPanel.SetRowSpan(this.SheetSkillsLabel4, 2);
+            this.SheetSkillsLabel4.Size = new System.Drawing.Size(220, 121);
+            this.SheetSkillsLabel4.TabIndex = 23;
+            this.SheetSkillsLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.SaveButton.Location = new System.Drawing.Point(216, 424);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(120, 57);
+            this.SaveButton.TabIndex = 2;
+            this.SaveButton.Text = "Save";
+            this.SaveButton.UseVisualStyleBackColor = true;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
+            // CharacterOpenFileDialog
+            // 
+            this.CharacterOpenFileDialog.FileName = "openFileDialog1";
+            // 
+            // OpenButton
+            // 
+            this.OpenButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.OpenButton.Location = new System.Drawing.Point(342, 424);
+            this.OpenButton.Name = "OpenButton";
+            this.OpenButton.Size = new System.Drawing.Size(120, 57);
+            this.OpenButton.TabIndex = 3;
+            this.OpenButton.Text = "Open";
+            this.OpenButton.UseVisualStyleBackColor = true;
+            this.OpenButton.Click += new System.EventHandler(this.OpenButton_Click);
+            // 
             // CharacterGenerationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
             this.ClientSize = new System.Drawing.Size(686, 493);
+            this.Controls.Add(this.OpenButton);
+            this.Controls.Add(this.SaveButton);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.NextButton);
             this.Controls.Add(this.MainTabControl);
@@ -874,8 +943,6 @@
         private System.Windows.Forms.Label SheetIntellectDataLabel;
         private System.Windows.Forms.Label SheetEducationDataLabel;
         private System.Windows.Forms.Label SheetSocialStandingDataLabel;
-        private System.Windows.Forms.Label SheetFirstNameLabel;
-        private System.Windows.Forms.Label SheetLastNameLabel;
         private System.Windows.Forms.Label SheetFirstNameDataLabel;
         private System.Windows.Forms.Label SheetLastNameDataLabel;
         private System.Windows.Forms.Label SheetSkillsLabel;
@@ -886,5 +953,13 @@
         private System.Windows.Forms.Label SkillsLabel4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button GenerateSkillsButton;
+        private System.Windows.Forms.Label SheetSkillsLabel1;
+        private System.Windows.Forms.Label SheetSkillsLabel2;
+        private System.Windows.Forms.Label SheetSkillsLabel3;
+        private System.Windows.Forms.Label SheetSkillsLabel4;
+        private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.SaveFileDialog CharacterSaveFileDialog;
+        private System.Windows.Forms.OpenFileDialog CharacterOpenFileDialog;
+        private System.Windows.Forms.Button OpenButton;
     }
 }

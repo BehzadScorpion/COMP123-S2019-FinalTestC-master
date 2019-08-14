@@ -218,12 +218,31 @@ namespace COMP123_S2019_FinalTestC.Views
                 SkillsLabel2.Text = Character.Skills[1];
                 SkillsLabel3.Text = Character.Skills[2];
                 SkillsLabel4.Text = Character.Skills[3];
+                //Writing the Character Skills on the Character sheet\
+                SheetSkillsLabel1.Text = Character.Skills[0];
+                SheetSkillsLabel2.Text = Character.Skills[1];
+                SheetSkillsLabel3.Text = Character.Skills[2];
+                SheetSkillsLabel4.Text = Character.Skills[3];
 
                 SkillsReader.Close();
                 SkillsReader.Dispose();
                 skills.Clear();
 
             }
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            CharacterSaveFileDialog.FileName= "Character.txt";
+            CharacterSaveFileDialog.InitialDirectory= "..//..//Data";
+            CharacterSaveFileDialog.ShowDialog();
+        }
+
+        private void OpenButton_Click(object sender, EventArgs e)
+        {
+            CharacterOpenFileDialog.FileName = "Character.txt";
+            CharacterOpenFileDialog.InitialDirectory = "..//..//Data";
+            CharacterOpenFileDialog.ShowDialog();
         }
     }
 }
