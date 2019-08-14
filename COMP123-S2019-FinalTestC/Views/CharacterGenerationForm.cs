@@ -12,6 +12,8 @@ using COMP123_S2019_FinalTestC.Objects;
  * STUDENT NAME: Seyed Behzad Afrasiabi
  * STUDENT ID: 300-605-726
  * DESCRIPTION: This is the main form for the application
+ * GitHub: https://github.com/BehzadScorpion/COMP123-S2019-FinalTestC-master
+ * Last Modified: 8/14/2019, 11:54am
  */
 
 namespace COMP123_S2019_FinalTestC.Views
@@ -231,6 +233,11 @@ namespace COMP123_S2019_FinalTestC.Views
             }
         }
 
+        /// <summary>
+        /// The Clicl Events for SaveButton and OpenButton. These events show the appropriate file dialogue.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SaveButton_Click(object sender, EventArgs e)
         {
             CharacterSaveFileDialog.FileName= "Character.txt";
