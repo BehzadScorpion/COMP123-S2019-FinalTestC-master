@@ -37,7 +37,7 @@
             this.FirstNameDataLabel = new System.Windows.Forms.Label();
             this.LastNameDataLabel = new System.Windows.Forms.Label();
             this.AbilityPage = new System.Windows.Forms.TabPage();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.AbilitiesTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.StrengthDataLabel = new System.Windows.Forms.Label();
             this.DexterityLabel = new System.Windows.Forms.Label();
             this.StrengthLabel = new System.Windows.Forms.Label();
@@ -52,14 +52,33 @@
             this.EducationDataLabel = new System.Windows.Forms.Label();
             this.SocialStandingDataLabel = new System.Windows.Forms.Label();
             this.SkillsPage = new System.Windows.Forms.TabPage();
-            this.CharacterSheetPage = new System.Windows.Forms.TabPage();
             this.NextButton = new System.Windows.Forms.Button();
             this.BackButton = new System.Windows.Forms.Button();
+            this.CharachterSheetTableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
+            this.CharacterSheetPage = new System.Windows.Forms.TabPage();
+            this.SheetStrengthLabel = new System.Windows.Forms.Label();
+            this.SheetDexterityLabel = new System.Windows.Forms.Label();
+            this.SheetEnduranceLabel = new System.Windows.Forms.Label();
+            this.SheetIntellectLabel = new System.Windows.Forms.Label();
+            this.SheetEducationLabel = new System.Windows.Forms.Label();
+            this.SheetSocialStandingLabel = new System.Windows.Forms.Label();
+            this.SheetStrengthDataLabel = new System.Windows.Forms.Label();
+            this.SheetDexterityDataLabel = new System.Windows.Forms.Label();
+            this.SheetEnduranceDataLabel = new System.Windows.Forms.Label();
+            this.SheetIntellectDataLabel = new System.Windows.Forms.Label();
+            this.SheetEducationDataLabel = new System.Windows.Forms.Label();
+            this.SheetSocialStandingDataLabel = new System.Windows.Forms.Label();
+            this.SheetFirstNameLabel = new System.Windows.Forms.Label();
+            this.SheetLastNameLabel = new System.Windows.Forms.Label();
+            this.SheetFirstNameDataLabel = new System.Windows.Forms.Label();
+            this.SheetLastNameDataLabel = new System.Windows.Forms.Label();
             this.MainTabControl.SuspendLayout();
             this.IdentityPage.SuspendLayout();
             this.IdentityTableLayoutPanel.SuspendLayout();
             this.AbilityPage.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.AbilitiesTableLayoutPanel.SuspendLayout();
+            this.CharachterSheetTableLayoutPanel.SuspendLayout();
+            this.CharacterSheetPage.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainTabControl
@@ -176,7 +195,7 @@
             // 
             // AbilityPage
             // 
-            this.AbilityPage.Controls.Add(this.tableLayoutPanel1);
+            this.AbilityPage.Controls.Add(this.AbilitiesTableLayoutPanel);
             this.AbilityPage.Location = new System.Drawing.Point(4, 38);
             this.AbilityPage.Name = "AbilityPage";
             this.AbilityPage.Padding = new System.Windows.Forms.Padding(3);
@@ -185,39 +204,39 @@
             this.AbilityPage.Text = "Abilities";
             this.AbilityPage.UseVisualStyleBackColor = true;
             // 
-            // tableLayoutPanel1
+            // AbilitiesTableLayoutPanel
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.tableLayoutPanel1.Controls.Add(this.StrengthDataLabel, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.DexterityLabel, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.StrengthLabel, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.GenerateAbilitiesButton, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.EnduranceLabel, 0, 2);
-            this.tableLayoutPanel1.Controls.Add(this.IntellectLabel, 0, 3);
-            this.tableLayoutPanel1.Controls.Add(this.EducationLabel, 0, 4);
-            this.tableLayoutPanel1.Controls.Add(this.SocialStandingLabel, 0, 5);
-            this.tableLayoutPanel1.Controls.Add(this.DexterityDataLabel, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.EnduranceDataLabel, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.IntellectDataLabel, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.EducationDataLabel, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.SocialStandingDataLabel, 1, 5);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(11, 6);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 8;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(658, 353);
-            this.tableLayoutPanel1.TabIndex = 0;
+            this.AbilitiesTableLayoutPanel.ColumnCount = 4;
+            this.AbilitiesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.AbilitiesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.AbilitiesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.AbilitiesTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.StrengthDataLabel, 1, 0);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.DexterityLabel, 0, 1);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.StrengthLabel, 0, 0);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.GenerateAbilitiesButton, 2, 7);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.EnduranceLabel, 0, 2);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.IntellectLabel, 0, 3);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.EducationLabel, 0, 4);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.SocialStandingLabel, 0, 5);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.DexterityDataLabel, 1, 1);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.EnduranceDataLabel, 1, 2);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.IntellectDataLabel, 1, 3);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.EducationDataLabel, 1, 4);
+            this.AbilitiesTableLayoutPanel.Controls.Add(this.SocialStandingDataLabel, 1, 5);
+            this.AbilitiesTableLayoutPanel.Location = new System.Drawing.Point(11, 6);
+            this.AbilitiesTableLayoutPanel.Name = "AbilitiesTableLayoutPanel";
+            this.AbilitiesTableLayoutPanel.RowCount = 8;
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.AbilitiesTableLayoutPanel.Size = new System.Drawing.Size(658, 353);
+            this.AbilitiesTableLayoutPanel.TabIndex = 0;
             // 
             // StrengthDataLabel
             // 
@@ -261,7 +280,7 @@
             this.GenerateAbilitiesButton.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.SetColumnSpan(this.GenerateAbilitiesButton, 2);
+            this.AbilitiesTableLayoutPanel.SetColumnSpan(this.GenerateAbilitiesButton, 2);
             this.GenerateAbilitiesButton.Location = new System.Drawing.Point(364, 311);
             this.GenerateAbilitiesButton.Name = "GenerateAbilitiesButton";
             this.GenerateAbilitiesButton.Size = new System.Drawing.Size(291, 39);
@@ -392,15 +411,6 @@
             this.SkillsPage.Text = "Skills";
             this.SkillsPage.UseVisualStyleBackColor = true;
             // 
-            // CharacterSheetPage
-            // 
-            this.CharacterSheetPage.Location = new System.Drawing.Point(4, 38);
-            this.CharacterSheetPage.Name = "CharacterSheetPage";
-            this.CharacterSheetPage.Size = new System.Drawing.Size(678, 363);
-            this.CharacterSheetPage.TabIndex = 3;
-            this.CharacterSheetPage.Text = "Character Sheet";
-            this.CharacterSheetPage.UseVisualStyleBackColor = true;
-            // 
             // NextButton
             // 
             this.NextButton.Location = new System.Drawing.Point(552, 425);
@@ -421,6 +431,251 @@
             this.BackButton.UseVisualStyleBackColor = true;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // CharachterSheetTableLayoutPanel
+            // 
+            this.CharachterSheetTableLayoutPanel.ColumnCount = 4;
+            this.CharachterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.45596F));
+            this.CharachterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 34.45596F));
+            this.CharachterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.54404F));
+            this.CharachterSheetTableLayoutPanel.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 15.54404F));
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetStrengthDataLabel, 3, 0);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetDexterityDataLabel, 3, 1);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetEnduranceDataLabel, 3, 2);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetIntellectDataLabel, 3, 3);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetEducationDataLabel, 3, 4);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSocialStandingDataLabel, 3, 5);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetStrengthLabel, 2, 0);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetDexterityLabel, 2, 1);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetEnduranceLabel, 2, 2);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetIntellectLabel, 2, 3);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetEducationLabel, 2, 4);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetSocialStandingLabel, 2, 5);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetFirstNameLabel, 0, 0);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetLastNameLabel, 1, 0);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetFirstNameDataLabel, 0, 1);
+            this.CharachterSheetTableLayoutPanel.Controls.Add(this.SheetLastNameDataLabel, 1, 1);
+            this.CharachterSheetTableLayoutPanel.Location = new System.Drawing.Point(10, 7);
+            this.CharachterSheetTableLayoutPanel.Name = "CharachterSheetTableLayoutPanel";
+            this.CharachterSheetTableLayoutPanel.RowCount = 6;
+            this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CharachterSheetTableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.CharachterSheetTableLayoutPanel.Size = new System.Drawing.Size(658, 353);
+            this.CharachterSheetTableLayoutPanel.TabIndex = 0;
+            // 
+            // CharacterSheetPage
+            // 
+            this.CharacterSheetPage.Controls.Add(this.CharachterSheetTableLayoutPanel);
+            this.CharacterSheetPage.Location = new System.Drawing.Point(4, 38);
+            this.CharacterSheetPage.Name = "CharacterSheetPage";
+            this.CharacterSheetPage.Size = new System.Drawing.Size(678, 363);
+            this.CharacterSheetPage.TabIndex = 3;
+            this.CharacterSheetPage.Text = "Character Sheet";
+            this.CharacterSheetPage.UseVisualStyleBackColor = true;
+            // 
+            // SheetStrengthLabel
+            // 
+            this.SheetStrengthLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetStrengthLabel.Location = new System.Drawing.Point(455, 0);
+            this.SheetStrengthLabel.Name = "SheetStrengthLabel";
+            this.SheetStrengthLabel.Size = new System.Drawing.Size(96, 58);
+            this.SheetStrengthLabel.TabIndex = 3;
+            this.SheetStrengthLabel.Text = "Str.";
+            this.SheetStrengthLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetDexterityLabel
+            // 
+            this.SheetDexterityLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetDexterityLabel.Location = new System.Drawing.Point(455, 58);
+            this.SheetDexterityLabel.Name = "SheetDexterityLabel";
+            this.SheetDexterityLabel.Size = new System.Drawing.Size(96, 58);
+            this.SheetDexterityLabel.TabIndex = 4;
+            this.SheetDexterityLabel.Text = "Dex.";
+            this.SheetDexterityLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetEnduranceLabel
+            // 
+            this.SheetEnduranceLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetEnduranceLabel.Location = new System.Drawing.Point(455, 116);
+            this.SheetEnduranceLabel.Name = "SheetEnduranceLabel";
+            this.SheetEnduranceLabel.Size = new System.Drawing.Size(96, 58);
+            this.SheetEnduranceLabel.TabIndex = 5;
+            this.SheetEnduranceLabel.Text = "End.";
+            this.SheetEnduranceLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetIntellectLabel
+            // 
+            this.SheetIntellectLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetIntellectLabel.Location = new System.Drawing.Point(455, 174);
+            this.SheetIntellectLabel.Name = "SheetIntellectLabel";
+            this.SheetIntellectLabel.Size = new System.Drawing.Size(96, 58);
+            this.SheetIntellectLabel.TabIndex = 6;
+            this.SheetIntellectLabel.Text = "Int.";
+            this.SheetIntellectLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetEducationLabel
+            // 
+            this.SheetEducationLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetEducationLabel.Location = new System.Drawing.Point(455, 232);
+            this.SheetEducationLabel.Name = "SheetEducationLabel";
+            this.SheetEducationLabel.Size = new System.Drawing.Size(96, 58);
+            this.SheetEducationLabel.TabIndex = 7;
+            this.SheetEducationLabel.Text = "Ed.";
+            this.SheetEducationLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetSocialStandingLabel
+            // 
+            this.SheetSocialStandingLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetSocialStandingLabel.Location = new System.Drawing.Point(455, 290);
+            this.SheetSocialStandingLabel.Name = "SheetSocialStandingLabel";
+            this.SheetSocialStandingLabel.Size = new System.Drawing.Size(96, 63);
+            this.SheetSocialStandingLabel.TabIndex = 8;
+            this.SheetSocialStandingLabel.Text = "Soc.";
+            this.SheetSocialStandingLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetStrengthDataLabel
+            // 
+            this.SheetStrengthDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetStrengthDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetStrengthDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetStrengthDataLabel.Location = new System.Drawing.Point(557, 0);
+            this.SheetStrengthDataLabel.Name = "SheetStrengthDataLabel";
+            this.SheetStrengthDataLabel.Size = new System.Drawing.Size(98, 58);
+            this.SheetStrengthDataLabel.TabIndex = 9;
+            this.SheetStrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SheetDexterityDataLabel
+            // 
+            this.SheetDexterityDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetDexterityDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetDexterityDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetDexterityDataLabel.Location = new System.Drawing.Point(557, 58);
+            this.SheetDexterityDataLabel.Name = "SheetDexterityDataLabel";
+            this.SheetDexterityDataLabel.Size = new System.Drawing.Size(98, 58);
+            this.SheetDexterityDataLabel.TabIndex = 10;
+            this.SheetDexterityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SheetEnduranceDataLabel
+            // 
+            this.SheetEnduranceDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetEnduranceDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetEnduranceDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetEnduranceDataLabel.Location = new System.Drawing.Point(557, 116);
+            this.SheetEnduranceDataLabel.Name = "SheetEnduranceDataLabel";
+            this.SheetEnduranceDataLabel.Size = new System.Drawing.Size(98, 58);
+            this.SheetEnduranceDataLabel.TabIndex = 11;
+            this.SheetEnduranceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SheetIntellectDataLabel
+            // 
+            this.SheetIntellectDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetIntellectDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetIntellectDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetIntellectDataLabel.Location = new System.Drawing.Point(557, 174);
+            this.SheetIntellectDataLabel.Name = "SheetIntellectDataLabel";
+            this.SheetIntellectDataLabel.Size = new System.Drawing.Size(98, 58);
+            this.SheetIntellectDataLabel.TabIndex = 12;
+            this.SheetIntellectDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SheetEducationDataLabel
+            // 
+            this.SheetEducationDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetEducationDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetEducationDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetEducationDataLabel.Location = new System.Drawing.Point(557, 232);
+            this.SheetEducationDataLabel.Name = "SheetEducationDataLabel";
+            this.SheetEducationDataLabel.Size = new System.Drawing.Size(98, 58);
+            this.SheetEducationDataLabel.TabIndex = 13;
+            this.SheetEducationDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SheetSocialStandingDataLabel
+            // 
+            this.SheetSocialStandingDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetSocialStandingDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetSocialStandingDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetSocialStandingDataLabel.Location = new System.Drawing.Point(557, 290);
+            this.SheetSocialStandingDataLabel.Name = "SheetSocialStandingDataLabel";
+            this.SheetSocialStandingDataLabel.Size = new System.Drawing.Size(98, 63);
+            this.SheetSocialStandingDataLabel.TabIndex = 14;
+            this.SheetSocialStandingDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SheetFirstNameLabel
+            // 
+            this.SheetFirstNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetFirstNameLabel.Location = new System.Drawing.Point(3, 0);
+            this.SheetFirstNameLabel.Name = "SheetFirstNameLabel";
+            this.SheetFirstNameLabel.Size = new System.Drawing.Size(220, 58);
+            this.SheetFirstNameLabel.TabIndex = 15;
+            this.SheetFirstNameLabel.Text = "First Name";
+            this.SheetFirstNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetLastNameLabel
+            // 
+            this.SheetLastNameLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetLastNameLabel.Location = new System.Drawing.Point(229, 0);
+            this.SheetLastNameLabel.Name = "SheetLastNameLabel";
+            this.SheetLastNameLabel.Size = new System.Drawing.Size(220, 58);
+            this.SheetLastNameLabel.TabIndex = 16;
+            this.SheetLastNameLabel.Text = "Last Name";
+            this.SheetLastNameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SheetFirstNameDataLabel
+            // 
+            this.SheetFirstNameDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetFirstNameDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetFirstNameDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetFirstNameDataLabel.Location = new System.Drawing.Point(3, 58);
+            this.SheetFirstNameDataLabel.Name = "SheetFirstNameDataLabel";
+            this.SheetFirstNameDataLabel.Size = new System.Drawing.Size(220, 58);
+            this.SheetFirstNameDataLabel.TabIndex = 17;
+            this.SheetFirstNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // SheetLastNameDataLabel
+            // 
+            this.SheetLastNameDataLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.SheetLastNameDataLabel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.SheetLastNameDataLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.SheetLastNameDataLabel.Location = new System.Drawing.Point(229, 58);
+            this.SheetLastNameDataLabel.Name = "SheetLastNameDataLabel";
+            this.SheetLastNameDataLabel.Size = new System.Drawing.Size(220, 58);
+            this.SheetLastNameDataLabel.TabIndex = 18;
+            this.SheetLastNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // CharacterGenerationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(15F, 29F);
@@ -435,7 +690,9 @@
             this.IdentityPage.ResumeLayout(false);
             this.IdentityTableLayoutPanel.ResumeLayout(false);
             this.AbilityPage.ResumeLayout(false);
-            this.tableLayoutPanel1.ResumeLayout(false);
+            this.AbilitiesTableLayoutPanel.ResumeLayout(false);
+            this.CharachterSheetTableLayoutPanel.ResumeLayout(false);
+            this.CharacterSheetPage.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -448,14 +705,13 @@
         private System.Windows.Forms.Button NextButton;
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.TabPage SkillsPage;
-        private System.Windows.Forms.TabPage CharacterSheetPage;
         private System.Windows.Forms.TableLayoutPanel IdentityTableLayoutPanel;
         private System.Windows.Forms.Label FirstNameLabel;
         private System.Windows.Forms.Button GenerateNameButton;
         private System.Windows.Forms.Label LastNameLabel;
         private System.Windows.Forms.Label FirstNameDataLabel;
         private System.Windows.Forms.Label LastNameDataLabel;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
+        private System.Windows.Forms.TableLayoutPanel AbilitiesTableLayoutPanel;
         private System.Windows.Forms.Label StrengthDataLabel;
         private System.Windows.Forms.Label DexterityLabel;
         private System.Windows.Forms.Label StrengthLabel;
@@ -469,5 +725,23 @@
         private System.Windows.Forms.Label IntellectDataLabel;
         private System.Windows.Forms.Label EducationDataLabel;
         private System.Windows.Forms.Label SocialStandingDataLabel;
+        private System.Windows.Forms.TabPage CharacterSheetPage;
+        private System.Windows.Forms.TableLayoutPanel CharachterSheetTableLayoutPanel;
+        private System.Windows.Forms.Label SheetStrengthLabel;
+        private System.Windows.Forms.Label SheetDexterityLabel;
+        private System.Windows.Forms.Label SheetEnduranceLabel;
+        private System.Windows.Forms.Label SheetIntellectLabel;
+        private System.Windows.Forms.Label SheetEducationLabel;
+        private System.Windows.Forms.Label SheetSocialStandingLabel;
+        private System.Windows.Forms.Label SheetStrengthDataLabel;
+        private System.Windows.Forms.Label SheetDexterityDataLabel;
+        private System.Windows.Forms.Label SheetEnduranceDataLabel;
+        private System.Windows.Forms.Label SheetIntellectDataLabel;
+        private System.Windows.Forms.Label SheetEducationDataLabel;
+        private System.Windows.Forms.Label SheetSocialStandingDataLabel;
+        private System.Windows.Forms.Label SheetFirstNameLabel;
+        private System.Windows.Forms.Label SheetLastNameLabel;
+        private System.Windows.Forms.Label SheetFirstNameDataLabel;
+        private System.Windows.Forms.Label SheetLastNameDataLabel;
     }
 }

@@ -21,10 +21,13 @@ namespace COMP123_S2019_FinalTestC.Views
         TextReader FirstNameReader { get; set; }
         TextReader LastNameReader { get; set; }
         Random Rand { get; set; }
+        CharacterPortfolio Portfolio { get; set; }
+        Identity CurrentIdentity { get; set; }
 
         public CharacterGenerationForm()
         {
-            InitializeComponent();         
+            InitializeComponent();
+            Rand = new Random();
         }
 
         /// <summary>
@@ -55,8 +58,7 @@ namespace COMP123_S2019_FinalTestC.Views
 
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
-            Rand = new Random();
-           
+   
             using (FirstNameReader= new StreamReader(File.Open("..\\..\\Data\\firstNames.txt", FileMode.Open)))
             {
                 List<string> names = new List<string>(); //List to store all the names from firstNames.txt
@@ -70,8 +72,8 @@ namespace COMP123_S2019_FinalTestC.Views
                 }
                 
                 randomFirstNameIndex = Rand.Next(i);
-                identity.FirstName= names[randomFirstNameIndex];
-                FirstNameDataLabel.Text = identity.FirstName;
+                CurrentIdentity.FirstName= names[randomFirstNameIndex];
+                FirstNameDataLabel.Text = CurrentIdentity.FirstName;
                 FirstNameReader.Close();
                 FirstNameReader.Dispose();
                 names.Clear();
@@ -90,17 +92,36 @@ namespace COMP123_S2019_FinalTestC.Views
                 }
 
                 randomLastNameIndex = Rand.Next(i);
-                identity.LastName= names[randomLastNameIndex];
-                LastNameDataLabel.Text = identity.LastName;
+                CurrentIdentity.LastName= names[randomLastNameIndex];
+                LastNameDataLabel.Text = CurrentIdentity.LastName;
                 LastNameReader.Close();
                 LastNameReader.Dispose();
                 names.Clear();
             }
+
+            Portfolio.Identity = CurrentIdentity;
    
         }
 
         private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
         {
+            int maxSkill = 100; // maximum amount of ability points
+
+            //Asigning random integers to the Portfolio properties
+            Portfolio.Strength= Convert.ToString(Rand.Next(maxSkill + 1));
+            Portfolio.Dexterity= Convert.ToString(Rand.Next(maxSkill + 1));
+            Portfolio.Endurance= Convert.ToString(Rand.Next(maxSkill + 1));
+            Portfolio.Intellect= Convert.ToString(Rand.Next(maxSkill + 1));
+            Portfolio.Education= Convert.ToString(Rand.Next(maxSkill + 1)); 
+            Portfolio.SocialStanding= Convert.ToString(Rand.Next(maxSkill + 1));
+
+            //Displaying the value of the Portfolio object properties in the appropriate labels
+            StrengthDataLabel.Text = Portfolio.Strength;
+            DexterityDataLabel.Text= Portfolio.Dexterity;
+            EnduranceDataLabel.Text= Portfolio.Endurance;
+            IntellectDataLabel.Text= Portfolio.Intellect;
+            EducationDataLabel.Text = Portfolio.Education;
+            SocialStandingDataLabel.Text= Portfolio.SocialStanding;
 
         }
     }

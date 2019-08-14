@@ -16,12 +16,10 @@ using System.Windows.Forms;
 namespace COMP123_S2019_FinalTestC.Views
 {
     public partial class MasterForm : Form
-    {
-        public Identity identity { get; set; }
+    {       
         public MasterForm()
         {
             InitializeComponent();
-            identity = new Identity();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using COMP123_S2019_FinalTestC.Views;
+﻿using COMP123_S2019_FinalTestC.Objects;
+using COMP123_S2019_FinalTestC.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace COMP123_S2019_FinalTestC
 {
     public static class Program
     {
-        
+        public static CharacterPortfolio Portfolio;
         public static CharacterGenerationForm characterForm;
 
         [STAThread]
@@ -24,6 +25,7 @@ namespace COMP123_S2019_FinalTestC
             Application.SetCompatibleTextRenderingDefault(false);
 
             characterForm = new CharacterGenerationForm();
+            Portfolio = new CharacterPortfolio();
 
             Application.Run(characterForm);
         }
