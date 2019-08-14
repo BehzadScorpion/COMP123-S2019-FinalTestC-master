@@ -1,4 +1,5 @@
-﻿using System;
+﻿using COMP123_S2019_FinalTestC.Objects;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -16,9 +17,11 @@ namespace COMP123_S2019_FinalTestC.Views
 {
     public partial class MasterForm : Form
     {
+        public Identity identity { get; set; }
         public MasterForm()
         {
             InitializeComponent();
+            identity = new Identity();
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using COMP123_S2019_FinalTestC.Objects;
 
 /*
  * STUDENT NAME: Seyed Behzad Afrasiabi
@@ -17,9 +18,9 @@ namespace COMP123_S2019_FinalTestC.Views
 {
     public partial class CharacterGenerationForm : COMP123_S2019_FinalTestC.Views.MasterForm
     {
-        public TextReader FirstNameReader { get; set; }
-        public TextReader LastNameReader { get; set; }
-        public Random random { get; set; }
+        TextReader FirstNameReader { get; set; }
+        TextReader LastNameReader { get; set; }
+        Random Rand { get; set; }
 
         public CharacterGenerationForm()
         {
@@ -54,13 +55,12 @@ namespace COMP123_S2019_FinalTestC.Views
 
         private void GenerateNameButton_Click(object sender, EventArgs e)
         {
-            random = new Random();
-            
+            Rand = new Random();
+           
             using (FirstNameReader= new StreamReader(File.Open("..\\..\\Data\\firstNames.txt", FileMode.Open)))
             {
-                int i = 0; //iteration for the looping statement
                 List<string> names = new List<string>(); //List to store all the names from firstNames.txt
-                int lines; //number of lines in firstnames.txt
+                int i = 0; //iteration for the looping statement             
                 int randomFirstNameIndex; //index of the generated random number
 
                 while (FirstNameReader.ReadLine() != null)
@@ -68,21 +68,40 @@ namespace COMP123_S2019_FinalTestC.Views
                     names.Add(FirstNameReader.ReadLine());
                     i++;
                 }
-                lines = i-1;
-                randomFirstNameIndex = random.Next(lines);
-                FirstNameDataLabel.Text = names[lines];
+                
+                randomFirstNameIndex = Rand.Next(i);
+                identity.FirstName= names[randomFirstNameIndex];
+                FirstNameDataLabel.Text = identity.FirstName;
                 FirstNameReader.Close();
                 FirstNameReader.Dispose();
+                names.Clear();
             }
-           
 
-            
-            //LastNameReader.Read();
-            //int randomFirstNameIndex = random.Next();
-            //int randomLastNameIndex;
+            using (LastNameReader = new StreamReader(File.Open("..//..//Data//lastNames.txt", FileMode.Open)))
+            {
+                List<string> names = new List<string>(); //List to store all the names from firstNames.txt
+                int i = 0; //iteration for the looping statement
+                int randomLastNameIndex; //index of the generated random number
 
-           
-            
+                while(LastNameReader.ReadLine()!= null)
+                {
+                    names.Add(LastNameReader.ReadLine());
+                    i++;
+                }
+
+                randomLastNameIndex = Rand.Next(i);
+                identity.LastName= names[randomLastNameIndex];
+                LastNameDataLabel.Text = identity.LastName;
+                LastNameReader.Close();
+                LastNameReader.Dispose();
+                names.Clear();
+            }
+   
+        }
+
+        private void GenerateAbilitiesButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

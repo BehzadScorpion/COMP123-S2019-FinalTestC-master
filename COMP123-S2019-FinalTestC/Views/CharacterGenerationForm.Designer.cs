@@ -268,6 +268,7 @@
             this.GenerateAbilitiesButton.TabIndex = 2;
             this.GenerateAbilitiesButton.Text = "Generate Abilities";
             this.GenerateAbilitiesButton.UseVisualStyleBackColor = true;
+            this.GenerateAbilitiesButton.Click += new System.EventHandler(this.GenerateAbilitiesButton_Click);
             // 
             // EnduranceLabel
             // 
