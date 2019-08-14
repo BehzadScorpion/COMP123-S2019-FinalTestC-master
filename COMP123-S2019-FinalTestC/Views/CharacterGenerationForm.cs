@@ -21,13 +21,15 @@ namespace COMP123_S2019_FinalTestC.Views
         TextReader FirstNameReader { get; set; }
         TextReader LastNameReader { get; set; }
         Random Rand { get; set; }
-        CharacterPortfolio Portfolio { get; set; }
-        Identity CurrentIdentity { get; set; }
+        public CharacterPortfolio Portfolio { get; set; }
+        public Identity CurrentIdentity { get; set; }
 
         public CharacterGenerationForm()
         {
             InitializeComponent();
             Rand = new Random();
+            Portfolio = new CharacterPortfolio();
+            CurrentIdentity = new Identity();
         }
 
         /// <summary>
@@ -71,9 +73,10 @@ namespace COMP123_S2019_FinalTestC.Views
                     i++;
                 }
                 
-                randomFirstNameIndex = Rand.Next(i);
-                CurrentIdentity.FirstName= names[randomFirstNameIndex];
-                FirstNameDataLabel.Text = CurrentIdentity.FirstName;
+                randomFirstNameIndex = Rand.Next(i);//generating the random number for the First-Name Index
+                CurrentIdentity.FirstName= names[randomFirstNameIndex];//getting the randomized name from the list and setting it as the FirstName property
+                FirstNameDataLabel.Text = CurrentIdentity.FirstName; //displaying First Name 
+                SheetFirstNameDataLabel.Text = CurrentIdentity.FirstName; //displaying First Name 
                 FirstNameReader.Close();
                 FirstNameReader.Dispose();
                 names.Clear();
@@ -91,9 +94,10 @@ namespace COMP123_S2019_FinalTestC.Views
                     i++;
                 }
 
-                randomLastNameIndex = Rand.Next(i);
-                CurrentIdentity.LastName= names[randomLastNameIndex];
-                LastNameDataLabel.Text = CurrentIdentity.LastName;
+                randomLastNameIndex = Rand.Next(i); //generating the random number for the Last-Name Index
+                CurrentIdentity.LastName= names[randomLastNameIndex];//getting the randomized name from the list and setting it as the LastName property
+                LastNameDataLabel.Text = CurrentIdentity.LastName; //Displaying Last Name
+                SheetLastNameDataLabel.Text = CurrentIdentity.LastName; //Displaying Last Name in CharacterSheet
                 LastNameReader.Close();
                 LastNameReader.Dispose();
                 names.Clear();
@@ -122,6 +126,14 @@ namespace COMP123_S2019_FinalTestC.Views
             IntellectDataLabel.Text= Portfolio.Intellect;
             EducationDataLabel.Text = Portfolio.Education;
             SocialStandingDataLabel.Text= Portfolio.SocialStanding;
+
+            //Displaying the same values in the CharacterSheet
+            SheetStrengthDataLabel.Text= Portfolio.Strength;
+            SheetDexterityDataLabel.Text = Portfolio.Dexterity;
+            SheetEnduranceDataLabel.Text = Portfolio.Endurance;
+            SheetIntellectDataLabel.Text = Portfolio.Intellect;
+            SheetEducationDataLabel.Text = Portfolio.Education;
+            SheetSocialStandingDataLabel.Text = Portfolio.SocialStanding;
 
         }
     }

@@ -559,7 +559,7 @@
             this.SheetStrengthDataLabel.Name = "SheetStrengthDataLabel";
             this.SheetStrengthDataLabel.Size = new System.Drawing.Size(98, 58);
             this.SheetStrengthDataLabel.TabIndex = 9;
-            this.SheetStrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetStrengthDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SheetDexterityDataLabel
             // 
@@ -572,7 +572,7 @@
             this.SheetDexterityDataLabel.Name = "SheetDexterityDataLabel";
             this.SheetDexterityDataLabel.Size = new System.Drawing.Size(98, 58);
             this.SheetDexterityDataLabel.TabIndex = 10;
-            this.SheetDexterityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetDexterityDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SheetEnduranceDataLabel
             // 
@@ -585,7 +585,7 @@
             this.SheetEnduranceDataLabel.Name = "SheetEnduranceDataLabel";
             this.SheetEnduranceDataLabel.Size = new System.Drawing.Size(98, 58);
             this.SheetEnduranceDataLabel.TabIndex = 11;
-            this.SheetEnduranceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetEnduranceDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SheetIntellectDataLabel
             // 
@@ -598,7 +598,7 @@
             this.SheetIntellectDataLabel.Name = "SheetIntellectDataLabel";
             this.SheetIntellectDataLabel.Size = new System.Drawing.Size(98, 58);
             this.SheetIntellectDataLabel.TabIndex = 12;
-            this.SheetIntellectDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetIntellectDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SheetEducationDataLabel
             // 
@@ -611,7 +611,7 @@
             this.SheetEducationDataLabel.Name = "SheetEducationDataLabel";
             this.SheetEducationDataLabel.Size = new System.Drawing.Size(98, 58);
             this.SheetEducationDataLabel.TabIndex = 13;
-            this.SheetEducationDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetEducationDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SheetSocialStandingDataLabel
             // 
@@ -624,7 +624,7 @@
             this.SheetSocialStandingDataLabel.Name = "SheetSocialStandingDataLabel";
             this.SheetSocialStandingDataLabel.Size = new System.Drawing.Size(98, 63);
             this.SheetSocialStandingDataLabel.TabIndex = 14;
-            this.SheetSocialStandingDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetSocialStandingDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SheetFirstNameLabel
             // 
@@ -661,7 +661,7 @@
             this.SheetFirstNameDataLabel.Name = "SheetFirstNameDataLabel";
             this.SheetFirstNameDataLabel.Size = new System.Drawing.Size(220, 58);
             this.SheetFirstNameDataLabel.TabIndex = 17;
-            this.SheetFirstNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetFirstNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SheetLastNameDataLabel
             // 
@@ -674,7 +674,7 @@
             this.SheetLastNameDataLabel.Name = "SheetLastNameDataLabel";
             this.SheetLastNameDataLabel.Size = new System.Drawing.Size(220, 58);
             this.SheetLastNameDataLabel.TabIndex = 18;
-            this.SheetLastNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SheetLastNameDataLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // CharacterGenerationForm
             // 

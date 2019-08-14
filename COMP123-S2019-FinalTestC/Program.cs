@@ -25,7 +25,6 @@ namespace COMP123_S2019_FinalTestC
             Application.SetCompatibleTextRenderingDefault(false);
 
             characterForm = new CharacterGenerationForm();
-            Portfolio = new CharacterPortfolio();
 
             Application.Run(characterForm);
         }
