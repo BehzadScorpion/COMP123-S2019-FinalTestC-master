@@ -8,8 +8,8 @@ using System.Windows.Forms;
 using System.IO;
 
 /*
- * STUDENT NAME:
- * STUDENT ID:
+ * STUDENT NAME: Seyed Behzad Afrasiabi
+ * STUDENT ID: 300-605-726
  * DESCRIPTION: This is the main form for the application
  */
 

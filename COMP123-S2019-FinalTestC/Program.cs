@@ -5,6 +5,11 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/*
+ * STUDENT NAME: Seyed Behzad Afrasiabi
+ * STUDENT ID: 300-605-726
+ * DESCRIPTION: The main entry point for the application.
+ */
 namespace COMP123_S2019_FinalTestC
 {
     public static class Program
@@ -12,10 +17,6 @@ namespace COMP123_S2019_FinalTestC
         
         public static CharacterGenerationForm characterForm;
 
-
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
         [STAThread]
         static void Main()
         {

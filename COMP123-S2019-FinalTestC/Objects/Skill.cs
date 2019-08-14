@@ -5,8 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 /*
- * STUDENT NAME:
- * STUDENT ID:
+ * STUDENT NAME: Seyed Behzad Afrasiabi
+ * STUDENT ID: 300-605-726
  * DESCRIPTION: This is the Skill class to be used with the CharacterPortfolio Class
  */
 
